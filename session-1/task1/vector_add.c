@@ -15,5 +15,10 @@
     Store your answer in array c
     Print your final answer
     */
+   for (int i = 0; i<=4; i++){
+      c[i] = a[i]+b[i];
+      printf("%.2f \n", c[i]);
+   }
+
     return 0;
  }
