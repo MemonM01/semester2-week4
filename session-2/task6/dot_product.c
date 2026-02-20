@@ -5,8 +5,9 @@
 // modify this code so that 'n' is a command-line argument
 // we can then run the code for any chosen vector size
 
-int main( void ) {
-    int n=10;
+int main( int argc, char **argv ) {
+    argc = 2; // for testing, we will set n=10
+    argv[1] = n;
     float *vec1 = calloc(n,sizeof(float));
     float *vec2 = calloc(n,sizeof(float));
 

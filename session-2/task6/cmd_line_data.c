@@ -14,10 +14,20 @@
 #include <stdlib.h>
 
 int main( int argc, char **argv ) {
+
     
-    /*
-    Your code
-    */
+    if (argc != 4) {
+        fprintf(stderr, "Usage: %s <integer> <string> <double>\n", argv[0]);
+        return 1;
+    }
+
+    int integer_value = atoi(argv[1]);
+    char *string_value = argv[2];
+    double double_value = atof(argv[3]);
+
+    printf("Integer value: %d\n", integer_value);
+    printf("String value: %s\n", string_value);
+    printf("Double value: %.2f\n", double_value);
 
     return 0;
 }

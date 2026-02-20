@@ -4,6 +4,7 @@
  */
 
  #include <stdio.h>
+ #include <stdlib.h>
 
  int main( void ) {
     int n = 5;
@@ -22,6 +23,17 @@
     Store your answer in d
     print your final answer
     */
+       for (int i = 0; i < n; i++) {
+         a[i] = i + 1.0;  // Initialize vector a with values 1.0, 2.0, ..., n
+         b[i] = (i + 1) * 2.0;  // Initialize vector b with values 2.0, 4.0, ..., 2n
+      }
+      float dot_product = 0.0;
+      for (int k = 0; k < n; k++) {
+         dot_product += a[k] * b[k];  // Compute the dot product
+      }
+      d[0] = dot_product;  // Store the result in d
+      printf("The dot product of the vectors is: %f\n", d[0]);
+   
 
     // explicit deallocation of heap memory before exit */
     free(a);
